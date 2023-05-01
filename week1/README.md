@@ -20,19 +20,17 @@ random, and try to do this in a gas efficient manner.
 For example imagine your array has 12 items and you need to delete the items at indexes
 8, 2 and 7.
 The final array will then have items {0, 1, 3, 4, 5, 6, 9, 10, 11}
-<br><b>A:</b> [<u>Foundry Project</u>](https://github.com/flamuri-dev/expert-solidity-bootcamp/blob/main/week1/W1L2)
+<br><b>A:</b> [Foundry Project](https://github.com/flamuri-dev/expert-solidity-bootcamp/blob/main/week1/W1L2)
 
-<!---
 ## <b>Lesson 3</b>
 ><b>Q:</b> What are the advantages and disadvantages of the 256 bit word length in the EVM?
-<br><b>A:</b> 
+<br><b>A:</b> Advantages: It facilitates Keccak256 hash scheme and elliptic-curve computations and it also increases the precision in arithmetics.
+Disavantages: It requires more store space and memory to store that data and it also slows the execution of instructions (which affects directly the performance of the Ethereum network).
 
 ><b>Q:</b> What would happen if the implementation of a precompiled contract varied between Ethereum clients?
-<br><b>A:</b> 
+<br><b>A:</b> It could potentially lead to inconsistencies such as different clients producing different results for the same execution. That's why it's very important to closely follow the Ethereum protocol specification and maintain consistent implementations of precompiled contracts.
 
-><b>Q:</b> Using Remix write a simple contract that uses a memory variable, then using the debugger step through the function and inspect the memory.
-<br><b>A:</b> 
-
+<!---
 ## <b>Lesson 4</b>
 ><b>Q:</b>
 <br><b>A:</b> 
