@@ -30,14 +30,6 @@ Disavantages: It requires more store space and memory to store that data and it 
 ><b>Q:</b> What would happen if the implementation of a precompiled contract varied between Ethereum clients?
 <br><b>A:</b> It could potentially lead to inconsistencies such as different clients producing different results for the same execution. That's why it's very important to closely follow the Ethereum protocol specification and maintain consistent implementations of precompiled contracts.
 
-<!---
 ## <b>Lesson 4</b>
-><b>Q:</b>
-<br><b>A:</b> 
-
-><b>Q:</b>
-<br><b>A:</b> 
-
-><b>Q:</b>
-<br><b>A:</b> 
--->
+><b>Q: Optimising Storage: Take this contract. Use the sol2uml tool to find out how many storage slots it is using. By re ordering the variables, can you reduce the number of storage slots needed?</b>
+<br><b>A:</b> Short answer: yes. [Foundry Project](https://github.com/flamuri-dev/expert-solidity-bootcamp/blob/main/week1/W1L4)
