@@ -15,3 +15,7 @@
 ## Week 4
 ### [<u>expert-solidity-bootcamp/week4</u>](https://github.com/flamuri-dev/expert-solidity-bootcamp/blob/main/week4/README.md)
 <br>
+
+## CTF
+### [<u>expert-solidity-bootcamp/ctf</u>](https://github.com/flamuri-dev/expert-solidity-bootcamp/blob/main/ctf/README.md)
+<br>

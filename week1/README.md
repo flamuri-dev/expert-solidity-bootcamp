@@ -11,7 +11,7 @@
 <br><b>A:</b> A replay attack happens when a malicious figure sneaks up on a secure network connection, intercepts it, and then manages to delay or resend a valid data transmission in order to subvert the receiver. Both nonce (that produces a unique transaction hash) and the chain ID prevent replay attacks from happening on Ethereum.
 
 ><b>Q:</b> In a contract, how do we know who called a view function?
-<br><b>A:</b> We don't. Solidity functions with the view modifier are read-only, they do not modify the blockchain. So external calls to these functions will not form part of an Ethereum transaction, and will therefore not be put on the mempool. That way, it's strictly impossible to know who called a specific view function.
+<br><b>A:</b> We don't. Solidity functions with the view modifier are read-only, they do not modify the blockchain. So external calls to these functions will not form part of an Ethereum transaction, and will therefore not be put on the mempool. If the call is made within the execution of a transaction (created by an EOA), we still cannot rely on the msg.sender being the caller.
 
 ## <b>Lesson 2</b>
 ><b>Q:</b> Write a function that will delete items (one at a time) from a dynamic array without
@@ -28,8 +28,8 @@ The final array will then have items {0, 1, 3, 4, 5, 6, 9, 10, 11}
 Disavantages: It requires more store space and memory to store that data and it also slows the execution of instructions (which affects directly the performance of the Ethereum network).
 
 ><b>Q:</b> What would happen if the implementation of a precompiled contract varied between Ethereum clients?
-<br><b>A:</b> It could potentially lead to inconsistencies such as different clients producing different results for the same execution. That's why it's very important to closely follow the Ethereum protocol specification and maintain consistent implementations of precompiled contracts.
+<br><b>A:</b> It could potentially lead to inconsistencies such as different clients producing different results for the same execution. That's why it's very important to closely follow the Ethereum protocol specification and maintain consistent implementations of precompiled contracts. Otherwise, the different clients may not come to consensus and create forks of the network.
 
 ## <b>Lesson 4</b>
-><b>Q: Optimising Storage: Take this contract. Use the sol2uml tool to find out how many storage slots it is using. By re ordering the variables, can you reduce the number of storage slots needed?</b>
+><b>Q:</b> Optimising Storage: Take this contract. Use the sol2uml tool to find out how many storage slots it is using. By re ordering the variables, can you reduce the number of storage slots needed?
 <br><b>A:</b> Short answer: yes. [Foundry Project](https://github.com/flamuri-dev/expert-solidity-bootcamp/blob/main/week1/W1L4)
